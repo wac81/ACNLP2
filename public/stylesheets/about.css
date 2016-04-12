@@ -1,0 +1,74 @@
+/*
+ * Globals
+ */
+body{
+	font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti;
+	overflow-x: hidden;
+}
+.head-nav > li >a{
+    padding: 8.5px 0;
+}
+
+.foot{
+	text-align: center;
+	position: inherit;
+	margin-top: 80px;
+}
+/*
+ * content
+ */
+.page-1{
+	background-image: url(../images/silde-2-bg.png);
+	text-align: center;
+}
+.page-1 .row{
+	padding-top: 40px;
+}
+.caption{
+	margin: 40px 0;
+}
+.line{
+	display: block;
+	height: 3px;
+}
+.container .p1{
+	font-size:16px ;
+	line-height: 30px;
+}
+.h4{
+	margin-top: -15px;
+	text-align: center;
+	color: rgb(122,181,235);
+	margin-bottom: 40px;
+}
+.row{
+	position: relative;
+}
+.row .col-md-6:nth-child(1){
+	text-align: right;
+}
+.row .col-md-6 .details{
+	display: inline-block;
+    width: 300px;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+.row .col-md-6 img{
+	margin-right: 20px;
+    margin-top: -50px;
+    display: inline-block;
+}
+.li-h4{
+	color: #7eabf5;
+}
+.semicircle{
+	width: 200px;
+    height: 100px;
+    border-radius: 100px 100px 0 0;
+	border:1px solid #d6d6d6;
+	border-bottom: none;
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
+	z-index: -1;
+}

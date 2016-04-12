@@ -1,0 +1,113 @@
+/*
+ * Globals
+ */
+
+body {
+    color: rgb(89,89,89);
+	height: 100%;
+	overflow-x: hidden;
+	font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti;
+}
+
+
+
+
+
+.head-nav > li {
+    height: 100%;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 4px;
+}
+.head-nav > li >a{
+	padding: 10px 0;
+}
+/*内容*/
+.container-fluid:nth-child(odd){
+	background-image: url(../images/silde-2-bg.png);
+}
+.breadcrumb{
+	background-color: #fff;
+	padding: 20px 0 0 0;
+}
+.container .abstract1{
+	height: 370px;
+}
+
+.abstract1 .product-1{
+	margin: 65px 0 0 70px;
+	width: 360;
+	height: 225px;
+}
+.abstract1 p{
+	padding-top: 20px;
+}
+.abstract1 .description1{
+	position: relative;
+	width: 350px;
+    top: -190px;
+    left: 650px;
+    color: rgb(142,142,142);
+}
+
+.container .abstract2{
+	height: 370px;
+}
+.abstract2 .product-2{
+	margin: -70px 0 0 685px;
+	width: 360;
+	height: 225px;
+}
+.abstract2 p{
+	padding-top: 20px;
+}
+.abstract2 .description2{
+	position: relative;
+	width: 340px;
+    top: 95px;
+    left: 60px;
+    color: rgb(142,142,142);
+}
+
+.container .abstract3{
+	height: 370px;
+}
+.abstract3 .product-3{
+	margin: 50px 0 0 650px;
+	width: 360px;
+	height: 225px;
+}
+.abstract3 p{
+	padding-top: 20px;
+}
+.abstract3 .description3{
+	position: relative;
+	width: 340px;
+    top: -160px;
+    left: 40px;
+    color: rgb(142,142,142);
+}
+.foot{
+	text-align: center;
+	position: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

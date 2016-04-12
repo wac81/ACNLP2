@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ACNLP</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/head.css"/>
+    <link type="text/css" href="/stylesheets/home.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/ddfullscreenslider.css"/>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery.mousewheel.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/ddfullscreenslider.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<section id="dowebok" class="dd_fullscreenslider">		    
+		<div class="slidewrapper">
+		    <!-- 页眉 -->
+		    <article class="slide">	
+				<div class="head-wrap">
+			        <div class="head">
+			        	<div class="row">
+			        		<div class="col-md-4"><div class="head-brand"></div></div>
+			        		<div class="col-md-8">
+			        			<ul class="nav head-nav">
+					                <li class="active"><a href="/">首页</a></li>
+					                <li><a href="/product">产品</a></li>
+					                <li><a href="/api">文档</a></li>
+					                <li><a href="/demo">演示</a></li>
+					                <li><a href="http://autobot.acnlp.com:3000">智能客服</a></li>
+					                <li><a href="/about">关于</a></li>
+					            </ul>
+			        		</div>
+			        	</div>
+			        </div>
+			    </div>	
+			    <!--中部-->
+			    <div class="content">
+			    	<img src="/images/font.png" class="content_img">
+			        <div class="middle">
+			            <input type="text" class="parseInput form-control" placeholder="请输入你要解析的内容"><div class="parseSubmit btn btn-primary">解析</div> 
+			        </div>
+			    </div>
+				<img src="images/down.png" class="down">
+			    <!-- 页脚 -->
+		    </article>
+		    <article class="slide" id="slide-2">
+		    	<div class="container-fluid">
+		    		<div class="container">
+		    			<div class="head-title">
+							<h3>我们的特色</h3>
+							<img src="/images/line.png"><span class="hg">
+								<i></i>
+							</span>
+							<p>开放中文语义API，快速注册，立即使用</p>
+						</div>
+						<div class="slide-2-content">
+							<div class="details one">
+								<span class="details-bg"></span><span class="details-bg"></span>
+								<img src="/images/1.png" >
+								<div class="details-content">
+									<p>行业领先</p>
+									<span>强大的半监督机器学习引擎，结合独特的语义联想，语句分析等技术，将中文语义分析的准确度提升到商业应用级别</span>
+								</div>
+							</div>
+							<div class="details two">
+								<span class="details-bg"></span><span class="details-bg"></span>
+								<img src="/images/2.png" >
+								<div class="details-content">
+									<p>30秒可用</p>
+								</div>
+							</div>
+							<div class="details three">
+								<span class="details-bg"></span><span class="details-bg"></span>
+								<img src="/images/3.png" >
+								<div class="details-content">
+									<p>交互定制</p>
+									<span>可定制数据分析模型和解决方案，针对需求提供分类，消岐，典型意见提取等定制机器学习模型的建立和API服务</span>
+								</div>
+							</div>
+							<div class="details four">
+								<span class="details-bg"></span><span class="details-bg"></span>
+								<img src="/images/4.png" >
+								<div class="details-content">
+									<p>企业应用</p>
+									<span>成功为商业用户提供每日千万次API调用服务，付费用户不限次技术支持，稳定性和处理能力有可靠保证。</span>
+								</div>
+							</div>
+							<div class="details five">
+								<span class="details-bg"></span><span class="details-bg"></span>
+								<img src="/images/5.png" >
+								<div class="details-content">
+									<p>应有尽有</p>
+									<span>一站式解决您的中文语义分析需求。多个语义分析API，从情感倾向、实体、分类、聚类等多种维度助您分析海量非结构化文本，最大化数据</span>
+								</div>
+							</div>
+							<div class="details-center">
+								<img src="/images/6.png"/>
+								<p>核心技术</p>
+								<span>专注中文语义分析技术，拥有丰富的经验积累。自护研发千万级中文语料库，为精准和深度的中文语义分析提供坚实基础</span>
+							</div>
+							<div class="hidden-content">
+							
+							</div>
+						</div>
+						
+		    		</div>
+					
+				</div>	
+				<div class="foot">
+			        <div class="row">
+		        		<div class="col-md-4">ALL RIGHTS RESERVED 2016</div>
+		        		<div class="col-md-8">
+		        			CREATED BY AVATHEMES
+		        		</div>
+		        	</div>
+			    </div>	
+			    
+			</article>
+	    </div>
+    </section>
+</body>
+<script>
+    $(document).ready(function() {
+        $('.parseInput').val('');
+        $('.parseInput').focus();
+        $('.parseInput').keydown(function(event) {
+            if(event.keyCode == 13) {
+                location.href = '/demo/' + $(this).val();
+                $(this).val('');
+            }
+        });
+        $('.parseSubmit').click(function () {
+            var input = $('.parseInput').val();
+            location.href = '/demo/' + input;
+            $(this).val('');
+        });
+    });
+    var fss;
+	$(function() {
+		fss = new ddfullscreenslider({
+			sliderid: 'dowebok'
+		});
+		$('.down').click(function(){
+			fss.slideTo(1);
+		});
+		console.log(fss)
+	});
+	
+	
+	
+</script>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "acnlp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/start"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "debug": "*",
+    "ejs": "*",
+    "express": "*",
+    "iconv": "*",
+    "redis": "*",
+    "serve-favicon": "*"
+  }
+}
