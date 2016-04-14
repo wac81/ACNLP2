@@ -252,62 +252,77 @@ body {
 	cursor: pointer;
 	display: inline-block;
 }
-.analysis_result .a{
+.analysis_result .nr{
 	background-color:#0b97d4 ;	
 }
-.analysis_result .b{
+.analysis_result .c{
+	background-color:#E65353 ;	
+}
+.analysis_result .ns{
 	background-color:#ff774f ;	
 }
-.analysis_result .c{
+.analysis_result .nt{
 	background-color:#01c794 ;	
 }
-.analysis_result .d{
+.analysis_result .n{
 	background-color:#e16abe ;	
 }
-.analysis_result .e{
+.analysis_result .t{
 	background-color:#b2b42d;	
 }
 .analysis_result .f{
 	background-color:#5d5d5d ;	
 }
-.analysis_result .g{
-	background-color:#d14342 ;	
+.analysis_result .v{
+	background-color:#8869E8 ;	
 }
-.analysis_result .h{
+.analysis_result .a{
 	background-color:#8338b7 ;	
 }
-.analysis_result .j{
+.analysis_result .b{
 	background-color:#2bcc6f ;	
 }
-.analysis_result .k{
+.analysis_result .z{
 	background-color:#e49f1d ;	
 }
 .analysis_result .l{
 	background-color:#0bc8ca ;	
 }
-.analysis_result .m{
-	background-color:#5068e4 ;	
+.analysis_result .r{
+	background-color:#F56613 ;	
 }
-.analysis_result .n{
+.analysis_result .mq{
 	background-color:#b61dd7 ;	
 }
-.analysis_result .o{
+.analysis_result .m{
 	background-color:#ce5c66 ;	
 }
-.analysis_result .p{
-	background-color:#8e8c8d ;	
-}
 .analysis_result .q{
+	background-color:#DC0303 ;	
+}
+.analysis_result .d{
 	background-color:#f0cc40;	
 }
-.analysis_result .r{
-	background-color:#14a1bc ;	
+.analysis_result .p{
+	background-color:#FFE000 ;	
 }
-.analysis_result .s{
+.analysis_result .e{
+	background-color:#8e8c8d ;	
+}
+.analysis_result .o{
+	background-color:#f0ad40;	
+}
+.analysis_result .w{
+	background-color:#779AA0 ;	
+}
+.analysis_result .x{
+	background-color:#6DA23D ;	
+}
+.analysis_result .u{
 	background-color:#000 ;	
 }
-.analysis_result .none{
-	background-color:#999 ;	
+.analysis_result .new{
+	background-color:#0542B1 ;	
 }
 .analysis_result .itemS {
     width: 100%;

@@ -196,7 +196,6 @@
                 var oP = $(this).parent().siblings("p");
                 $.get('/atc/' + $(this).parent().siblings('.itemSpan1').text() + '_' + $(this).parent().siblings('.simiNO').text(), function(data) {
                     oP.text(data.data);
-                    console.log(data.data);
                 });
 			}
         });
@@ -244,78 +243,88 @@
             var analysisResult = $('.analysis_result');
             analysisResult.text('');
             var flag = $('<div class="flag"><p class="p2">词性标记</p></div>');
-            var classify = $('<div class="classify"><p class="p2">词性分类</p><span class="a">专有名词<i>0</i></span><span class="b">名词<i>0</i></span><span class="c">时间词<i>0</i></span><span class="d">标点符号<i>0</i></span><span class="e">介词<i>0</i></span><span class="f">数词<i>0</i></span><span class="g">副词<i>0</i></span><span class="h">量词<i>0</i></span><span class="j">动词<i>0</i></span><span class="k">网页链接<i>0</i></span><span class="l">连词<i>0</i></span><span class="m">助词<i>0</i></span><span class="n">方位词<i>0</i></span><span class="o">语气词<i>0</i></span><span class="p">字符串<i>0</i></span><span class="q">形容词<i>0</i></span><span class="r">代词<i>0</i></span><span class="s">地名<i>0</i></span></div>');
+            var classify = $('<div class="classify"><p class="p2">词性分类</p><span class="c">连词<i>0</i></span><span class="nr">人名<i>0</i></span><span class="ns">地名<i>0</i></span><span class="nt">机构名<i>0</i></span><span class="n">名词<i>0</i></span><span class="t">时间词<i>0</i></span><span class="f">方位词<i>0</i></span><span class="v">动词<i>0</i></span><span class="a">形容词<i>0</i></span><span class="b">区别词<i>0</i></span><span class="z">状态词<i>0</i></span><span class="r">代词<i>0</i></span><span class="m">数词<i>0</i></span><span class="q">量词<i>0</i></span><span class="d">副词<i>0</i></span><span class="p">介词<i>0</i></span><span class="u">助词<i>0</i></span><span class="e">叹词<i>0</i></span><span class="o">拟声词<i>0</i></span><span class="x">字符串<i>0</i></span><span class="w">标点符号<i>0</i></span><span class="new">新词<i>0</i></span></div>');
             classify.appendTo(analysisResult);
             flag.appendTo(analysisResult);
             
             
             for (var i = 0, k = result.flagsList.length; i < k; i+=1) {
-            	if(result.flagsList[i]['flag'] == "nt"){
-            		var item = $('<span class="a">' + result.flagsList[i]['word'] + '</span>');
-    				Length($(".classify .a"));
-            	}else if(result.flagsList[i]['flag'] == "n"){
-            		var item = $('<span class="b">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .b"));
-            	}else if(result.flagsList[i]['flag'] == "t"){
-            		var item = $('<span class="c">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .c"));
-            	}else if(result.flagsList[i]['flag'] == "x"){
-            		var item = $('<span class="d">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .d"));
-            	}else if(result.flagsList[i]['flag'] == "p"){
-            		var item = $('<span class="e">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .e"));
-            	}else if(result.flagsList[i]['flag'] == "d"){
-            		var item = $('<span class="f">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .f"));
-            	}else if(result.flagsList[i]['flag'] == "d"){
-            		var item = $('<span class="g">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .g"));
-            	}else if(result.flagsList[i]['flag'] == "m"){
-            		var item = $('<span class="h">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .h"));
-            	}else if(result.flagsList[i]['flag'] == "v"){
-            		var item = $('<span class="j">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .j"));
-            	}else if(result.flagsList[i]['flag'] == "wanyelianjie"){
-            		var item = $('<span class="k">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .k"));
-            	}else if(result.flagsList[i]['flag'] == "c"){
-            		var item = $('<span class="l">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .l"));
-            	}else if(result.flagsList[i]['flag'] == "u"){
-            		var item = $('<span class="m">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .m"));
-            	}else if(result.flagsList[i]['flag'] == "f"){
+            	if(result.flagsList[i]['flag'] == "nr"){
+            		var item = $('<span class="nr">' + result.flagsList[i]['word'] + '</span>');
+    				Length($(".classify .nr"));
+            	}else if(result.flagsList[i]['flag'] == "ns"){
+            		var item = $('<span class="ns">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .ns"));
+            	}else if(result.flagsList[i]['flag'] == "nt"){
+            		var item = $('<span class="nt">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .nt"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "n" ||result.flagsList[i]['flag'] == "an"){
             		var item = $('<span class="n">' + result.flagsList[i]['word'] + '</span>');
             		Length($(".classify .n"));
-            	}else if(result.flagsList[i]['flag'] == "y"){
-            		var item = $('<span class="o">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .o"));
-            	}else if(result.flagsList[i]['flag'] == "zifuchuan"){
-            		var item = $('<span class="p">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .p"));
-            	}else if(result.flagsList[i]['flag'] == "a"){
-            		var item = $('<span class="q">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .q"));
-            	}else if(result.flagsList[i]['flag'] == "r"){
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "t"){
+            		var item = $('<span class="t">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .t"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "f"){
+            		var item = $('<span class="f">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .f"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "v"){
+            		var item = $('<span class="v">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .v"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "a"){
+            		var item = $('<span class="a">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .a"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "b"){
+            		var item = $('<span class="b">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .b"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "z"){
+            		var item = $('<span class="z">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .z"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "r"){
             		var item = $('<span class="r">' + result.flagsList[i]['word'] + '</span>');
             		Length($(".classify .r"));
-            	}else if(result.flagsList[i]['flag'] == "ns"){
-            		var item = $('<span class="s">' + result.flagsList[i]['word'] + '</span>');
-            		Length($(".classify .ns"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "m"){
+            		var item = $('<span class="m">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .m"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "q"){
+            		var item = $('<span class="q">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .q"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "d"){
+            		var item = $('<span class="d">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .d"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "p"){
+            		var item = $('<span class="p">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .p"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "u"){
+            		var item = $('<span class="u">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .u"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "e"){
+            		var item = $('<span class="e">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .e"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "o"){
+            		var item = $('<span class="o">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .o"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "w"){
+            		var item = $('<span class="w">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .w"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "x"){
+            		var item = $('<span class="x">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .x"));
+            	}else if(result.flagsList[i]['flag'].substr(0,1) == "c"){
+            		var item = $('<span class="c">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .c"));
             	}else{
-            		var item = $('<span class="none">' + result.flagsList[i]['word'] + '</span>');
+            		var item = $('<span class="new">' + result.flagsList[i]['word'] + '</span>');
+            		Length($(".classify .new"));
             	}
                 
                 item.appendTo(flag);
             }
-            var classifyI = document.getElementsByClassName("classify")[0].getElementsByTagName("i");
-            for(var i = 0,len = classifyI.length;i < len;i++){
-                if(classifyI[i].firstChild.nodeValue == "0"){
-                    classifyI[i].parentNode.style.display = "none";
-                }
-            }
+          var classifyI = document.getElementsByClassName("classify")[0].getElementsByTagName("i");
+          for(var i = 0,len = classifyI.length;i < len;i++){
+              if(classifyI[i].firstChild.nodeValue == "0"){
+                  classifyI[i].parentNode.style.display = "none";
+              }
+          }
             //点击词性类别让其对应的分词显示，其他分词变灰
             var classifyDiv = document.getElementsByClassName("classify")[0];
             var flagDiv = document.getElementsByClassName("flag")[0];

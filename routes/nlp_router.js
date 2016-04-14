@@ -95,13 +95,13 @@ router.use('/:action/:nl', function (req, res, next) {
 
 // 自然语义分析路由
 // 参数action是行为，nl是用户输入的自然语言
-//router.get('/:action/:nl', function (req, res) {
-//	console.log(req.params.action);
-//	var nl = req.params.nl.replace(/\s/g, '');
-//	nlp_api[req.params.action](nl, function (result) {
-//		res.send(result);
-//	});
-//});
+router.get('/:action/:nl', function (req, res) {
+	console.log(req.params.action);
+	var nl = req.params.nl.replace(/\s/g, '');
+	nlp_api[req.params.action](nl, function (result) {
+		res.send(result);
+	});
+});
 
 // post
 router.post('/:action/', function (req, res) {
